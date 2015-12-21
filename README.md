@@ -10,6 +10,8 @@
 
 [Git vs Bare Git repository ](http://www.saintsjd.com/2011/01/what-is-a-bare-git-repository/);
 
+
+[xclip]()
 [How to map custom domain to app in heroku.](https://github.com/bhochhi/howto-guide/wiki/JNDI)
 Various db mapping mechanisms and examples for java applications
 -
