@@ -16,5 +16,7 @@
 
 [How to map custom domain to app in heroku.](https://github.com/bhochhi/howto-guide/wiki/JNDI)
 
+[How Maven work/](https://github.com/bhochhi/howto-guide/wiki/How-maven-works%3F)
+
 Various db mapping mechanisms and examples for java applications
 
