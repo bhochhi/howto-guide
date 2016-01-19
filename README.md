@@ -22,5 +22,7 @@
 
 [How to build a plugin?,ex for eclipse]()
 
+[Building Scalable Web Architecture and Distributed Systems](http://www.drdobbs.com/web-development/building-scalable-web-architecture-and-d/240142422)
+
 Various db mapping mechanisms and examples for java applications
 
