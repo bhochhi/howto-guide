@@ -4,6 +4,17 @@
 
 
 [Async and await]()
+---
+
+* Avoid Async void
+  Especially because of the way the exceptions are handled when using Async void. When expeception is thrown, it will be raise directly on the SynchronizationContext that was active when the async void method started. In the other hand, with async method with return type Task and Task<T>, exceptions are captured and stored on the Return Task itself, resulting easier and simplier handling.
+  Void returning async methods have a specific purpose: to make asynchronous event handlers possible.
+
+* Async all the way
+
+
+
+ ref: https://msdn.microsoft.com/en-us/magazine/jj991977.aspx
 
 [Troubleshooting using jmap](https://github.com/bhochhi/howto-guide/wiki/Troubleshooting-using-jmap)
 
