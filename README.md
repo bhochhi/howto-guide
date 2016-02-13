@@ -5,6 +5,8 @@
 
 [Async and await]()
 ---
+The "async" keyword enables the "await" keyword in that method and changes how method results are handled. Tha's all async does. It doesn't run this method on a thread pool. The begining of an async method is executed just like any other method. That is, it runs synchrously until it hits an "await" or throws an exception. Await is where things can get asynchronous. Await is like unary operator, it takes a single argument, an awaitable. Examines that awaitable to see if it has already completed; then the method just continues running, synhchronously just like regular method.
+
 
 * Avoid Async void
   Especially because of the way the exceptions are handled when using Async void. When expeception is thrown, it will be raise directly on the SynchronizationContext that was active when the async void method started. In the other hand, with async method with return type Task and Task<T>, exceptions are captured and stored on the Return Task itself, resulting easier and simplier handling.
