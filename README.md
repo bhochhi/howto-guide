@@ -7,7 +7,7 @@
 ---
 The begining of an async method is executed just like any other method. That is, it runs synchronously until it hits an "await" or throws an exception. Await is where things can get asynchronous. Await is like unary operator, it takes a single argument, an awaitable. Examines that awaitable to see if it has already completed; then the method just continues running, synhchronously just like regular method. But if awaitables are not completed yet, it waits for awaitable to complete or throw exception continue remaining of program flow. 
 
-When method returns awaitables: Task<T> or Task or void(don't recommend this), its saying you can await the result of such methods. Its not because method has async but it returns Task, which means you can await for the result of non-async method that returns Task. But you can't use await within such method. 
+When method returns awaitables: Task```<T>``` or Task or void(don't recommend this), its saying you can await the result of such methods. Its not because method has async but it returns Task, which means you can await for the result of non-async method that returns Task. But you can't use await within such method. 
 
 ```c#
 public async Task Method1(){
