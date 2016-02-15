@@ -7,7 +7,37 @@
 ---
 The begining of an async method is executed just like any other method. That is, it runs synchronously until it hits an "await" or throws an exception. Await is where things can get asynchronous. Await is like unary operator, it takes a single argument, an awaitable. Examines that awaitable to see if it has already completed; then the method just continues running, synhchronously just like regular method. But if awaitables are not completed yet, it waits for awaitable to complete or throw exception continue remaining of program flow. 
 
-There are two types of awaitables: Task<T> and Task. Asyc method can return those to types or void,
+When method returns awaitables: Task<T> or Task or void(don't recommend this), its saying you can await the result of such methods. Its not because method has async but it returns Task, which means you can await for the result of non-async method that returns Task. But you can't use await within such method. 
+
+```c#
+public async Task Method1(){
+
+//you can use await here.
+await...
+
+}
+
+public Task Method2{
+
+ //you can't use await here. 
+ 
+ 
+}
+
+
+
+```
+
+So, what is the benefit of using non-async method that returns a Task?
+
+A tip from [Stephen Cleary](); if you have a very simple asynchronous method, you may be able to write it without using the await keyword. If you can write it without await, then you should write it without await, and remove the async keyword from the method. A non-async method returning Task.FromResult is more efficient than an async method returning a value.
+
+If an async method returns Task or void, there is no return value however if such method return Task<T>, the method needs to return the type of T. 
+
+__Context__
+
+
+
 
 
 * Avoid Async void
