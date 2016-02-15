@@ -30,9 +30,19 @@ public Task Method2{
 
 So, what is the benefit of using non-async method that returns a Task?
 
-A tip from [Stephen Cleary](); if you have a very simple asynchronous method, you may be able to write it without using the await keyword. If you can write it without await, then you should write it without await, and remove the async keyword from the method. A non-async method returning Task.FromResult is more efficient than an async method returning a value.
+A tip from [Stephen Cleary](http://blog.stephencleary.com/); if you have a very simple asynchronous method, you may be able to write it without using the await keyword. If you can write it without await, then you should write it without await, and remove the async keyword from the method. A non-async method returning Task.FromResult is more efficient than an async method returning a value.
 
 If an async method returns Task or void, there is no return value however if such method return Task<T>, the method needs to return the type of T. 
+```c#
+ public async Task<int> Method1(){
+ 
+ await ...
+ .
+ .
+ return 2; // need to return integer 
+ 
+ }
+```
 
 __Context__
 
