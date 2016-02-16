@@ -7,7 +7,7 @@
 ---
 The begining of an async method is executed just like any other method. That is, it runs synchronously until it hits an "await" or throws an exception. Await is where things can get asynchronous. Await is like unary operator, it takes a single argument, an awaitable. Examines that awaitable to see if it has already completed; then the method just continues running, synhchronously just like regular method. But if awaitables are not completed yet, it waits for awaitable to complete or throw exception continue remaining of program flow. 
 
-When method returns awaitables: Task```<T>``` or Task or void(don't recommend this), its saying you can await the result of such methods. Its not because method has async but it returns Task, which means you can await for the result of non-async method that returns Task. But you can't use await within such method. 
+When method returns awaitables: Task\<T> or Task or void(don't recommend this), its saying you can await the result of such methods. Its not because method has async but it returns Task, which means you can await for the result of non-async method that returns Task. But you can't use await within such method. 
 
 ```c#
 public async Task Method1(){
@@ -24,8 +24,6 @@ public Task Method2{
  
 }
 
-
-
 ```
 
 So, what is the benefit of using non-async method that returns a Task?
@@ -37,9 +35,15 @@ return someService.CallAync();
 }
 ```
 To support further, a tip from [Stephen Cleary](http://blog.stephencleary.com/); if you have a very simple asynchronous method, you may be able to write it without using the await keyword. If you can write it without await, then you should write it without await, and remove the async keyword from the method. A non-async method returning Task.FromResult is more efficient than an async method returning a value.
-
-If an async method returns Task or void, there is no return value however if such method return Task<T>, the method needs to return the type of T. 
+Also note that you can't return Task<T> from non-async method. If an async method returns Task or void, there is no return value however if such method return Task\<T>, the method needs to return the type of T. 
 ```c#
+public Task<int> NonAsyncMethod(){
+.
+.
+return 5; //compile error, you need async method to do this.
+
+}
+
  public async Task<int> Method1(){
  
  await ...
@@ -50,7 +54,7 @@ If an async method returns Task or void, there is no return value however if suc
  }
 ```
 
-Alright, after knowing these basics, working on your first async/await codebase, you may ended up to senario especially with ASP.NET as follow, else everything has gone well with you: 
+Alright, after knowing these basics, working on your first async/await codebase, you may ended up with two cases especially with ASP.NET as follow, else everything has gone well with you, congrats: 
   1. Everything is working, results are as expected. However it seems every tasks are running synchronously.
   2. Seems like every tasks are completed but await never seems knowing if tasks are completed. 
 
@@ -59,7 +63,7 @@ The root case for first senario is either you don't have __await__ in your async
 
 
 * Avoid Async void
-  Especially because of the way the exceptions are handled when using Async void. When expeception is thrown, it will be raise directly on the SynchronizationContext that was active when the async void method started. In the other hand, with async method with return type Task and Task<T>, exceptions are captured and stored on the Return Task itself, resulting easier and simplier handling.
+  Especially because of the way the exceptions are handled when using Async void. When expeception is thrown, it will be raise directly on the SynchronizationContext that was active when the async void method started. In the other hand, with async method with return type Task and Task\<T>, exceptions are captured and stored on the Return Task itself, resulting easier and simplier handling.
   Void returning async methods have a specific purpose: to make asynchronous event handlers possible.
 
 * Async all the way
