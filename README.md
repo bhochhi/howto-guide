@@ -29,8 +29,14 @@ public Task Method2{
 ```
 
 So, what is the benefit of using non-async method that returns a Task?
-
-A tip from [Stephen Cleary](http://blog.stephencleary.com/); if you have a very simple asynchronous method, you may be able to write it without using the await keyword. If you can write it without await, then you should write it without await, and remove the async keyword from the method. A non-async method returning Task.FromResult is more efficient than an async method returning a value.
+Well, in my opinion, its just good idea to not use aync method when you don't have to. __async__ is needed only when you need to __await__. If your method is just an intermidiatory which is just calling another async method, then just return the Task. 
+```c#
+public Task<int> NonAsyncMethod(){
+var someService = new SomeService();
+return someService.CallAync();
+}
+```
+To support further, a tip from [Stephen Cleary](http://blog.stephencleary.com/); if you have a very simple asynchronous method, you may be able to write it without using the await keyword. If you can write it without await, then you should write it without await, and remove the async keyword from the method. A non-async method returning Task.FromResult is more efficient than an async method returning a value.
 
 If an async method returns Task or void, there is no return value however if such method return Task<T>, the method needs to return the type of T. 
 ```c#
@@ -43,9 +49,6 @@ If an async method returns Task or void, there is no return value however if suc
  
  }
 ```
-
-__Context__
-
 
 
 
