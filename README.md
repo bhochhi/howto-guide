@@ -50,6 +50,11 @@ If an async method returns Task or void, there is no return value however if suc
  }
 ```
 
+Alright, after knowing these basics, working on your first async/await codebase, you may ended up to senario especially with ASP.NET as follow, else everything has gone well with you: 
+  1. Everything is working, results are as expected. However it seems every tasks are running synchronously.
+  2. Seems like every tasks are completed but await never seems knowing if tasks are completed. 
+
+The root case for first senario is either you don't have __await__ in your async method. Without __await__, async method execute the method as the normal method execution. Or somewhere down the pipe, you are making a blocking call.   
 
 
 
