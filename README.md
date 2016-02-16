@@ -35,7 +35,7 @@ return someService.CallAync();
 }
 ```
 To support further, a tip from [Stephen Cleary](http://blog.stephencleary.com/); if you have a very simple asynchronous method, you may be able to write it without using the await keyword. If you can write it without await, then you should write it without await, and remove the async keyword from the method. A non-async method returning Task.FromResult is more efficient than an async method returning a value.
-Also note that you can't return Task<T> from non-async method. If an async method returns Task or void, there is no return value however if such method return Task\<T>, the method needs to return the type of T. 
+Also note that you can't return Task\<T> from non-async method. If an async method returns Task or void, there is no return value however if such method return Task\<T>, the method needs to return the type of T. 
 ```c#
 public Task<int> NonAsyncMethod(){
 .
