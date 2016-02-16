@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Web.Http;
 using ProductApps.Models;
-using NHibernate;
-using FluentNHibernate.Cfg.Db;
-using FluentNHibernate.Cfg;
-using Castle.Windsor;
-using Castle.MicroKernel.Registration;
-using ProductApps.App_Start.configurations;
 
 namespace ProductApps.Controllers
 {
@@ -22,83 +12,53 @@ namespace ProductApps.Controllers
         [HttpGet]
         public IEnumerable<Product> GetProducts()
         {
-            IList<Product> products = new List<Product>();
+            List<Product> products = new List<Product>();
 
+            //a task will run and wait for this to complete before returning products
              Task.Run(async () =>
                 {
                      await BuildProducts(products);
 
-                });
+                }).GetAwaiter().GetResult();
 
             return products;
-
-//            var container = new WindsorContainer();
-//
-//            container.Register(
-//              Component
-//              .For(typeof(App_Start.configurations.IDbConnection))
-//              .ImplementedBy(typeof(App_Start.configurations.DBConnection))            
-//          );
-//
-//            IDbConnection dbConnection = (DBConnection) container.Resolve(typeof(IDbConnection));
-//            using (var session = dbConnection.CreateSessionFactory().OpenSession())
-//            {   
-//                IList<Product> productList = session.QueryOver<Product>()
-//                    .Where(p=>p.Name=="Xing")
-//                    .List<Product>();
-//                throw new Exception("Testing AOP");
-//                //return productList.AsEnumerable<Product>();
-//            }            
         }
 
-        private async Task<IList<Product>> BuildProducts(IList<Product> products )
+        private async Task<List<Product>> BuildProducts(List<Product> products )
+        {
+           
+            var task3 = Method1Asyc(1,"task3", products);
+            var task2 = Method1Asyc(1109,"task2", products);
+            var task1 = Method1Asyc(4,"task1", products);
+
+            //            await Task.WhenAll(task1, task2, task3);
+            await Task.WhenAny(task1, task2, task3); //unable to verify WhenAny is waiting only for the first one that complete. Everytime I see all tasks completed.
+
+//           
+//            products.AddRange(task3.Result);
+//            products.AddRange(task2.Result);
+//            products.AddRange(task1.Result);
+            return products;
+        }
+
+        public Task<List<Product>>  Method1Asyc(int delay,string name, List<Product> products)
         {
 
-            var task1 = new Task(() =>
+//            await Task.Delay(delay);
+
+            return Task<List<Product>>.Factory.StartNew(() =>
             {
-                products.Add(new Product {Name = "Task1 product1"});
-                products.Add(new Product {Name = "Task1 product2"});
-                products.Add(new Product {Name = "Task1 product3"});
-                products.Add(new Product {Name = "Task1 product4"});
+//                List<Product> products = new List<Product>();
+                for (int i = 0; i < delay; i++)
+                {
+                    products.Add(new Product { Name = name + " " + i });
+                }
+                return products;
             });
+
            
-            var task2 = new Task(() =>
-            {
-                products.Add(new Product { Name = "task2 product1" });
-                products.Add(new Product { Name = "task2 product2" });
-                products.Add(new Product { Name = "task2 product3" });
-                products.Add(new Product { Name = "task2 product4" });
-            });
-         
-            var task3 = new Task(() =>
-            {
-                products.Add(new Product { Name = "task3 product1" });
-                products.Add(new Product { Name = "task3 product2" });
-                products.Add(new Product { Name = "task3 product3" });
-                products.Add(new Product { Name = "task3 product4" });
-
-            });
-            task3.Start();
-            task1.Start();
-               task2.Start();
-            await Task.WhenAll(task1, task2, task3);
-            return products;
+//            return products;
         }
-
-
-        //public IHttpActionResult GetProduct(int id)
-        //{
-        //    var product = products.FirstOrDefault<Product>(x => x.Id == id);
-        //    if (product == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    return Ok(product);
-        //}
-
-
-
 
     }
 }

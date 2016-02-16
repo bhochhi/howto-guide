@@ -1,17 +1,9 @@
-﻿using Castle.Core;
-using Castle.MicroKernel.Registration;
-using Castle.Windsor;
-using ProductApps.Aspects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Web;
 using System.Web.Http;
-using System.Web.Routing;
 
 namespace ProductApps
 {
-    public class WebApiApplication : System.Web.HttpApplication
+    public class WebApiApplication : HttpApplication
     {
         protected void Application_Start()
         {
