@@ -7,7 +7,7 @@
 ---
 The begining of an async method is executed just like any other method. That is, it runs synchronously until it hits an "await" or throws an exception. Await is where things can get asynchronous. Await is like unary operator, it takes a single argument, an awaitable. Examines that awaitable to see if it has already completed; then the method just continues running, synhchronously just like regular method. But if awaitables are not completed yet, it waits for awaitable to complete or throw exception continue remaining of program flow. 
 
-When method returns awaitables: Task\<T> or Task or void(don't recommend this), its saying you can await the result of such methods. Its not because method has async but it returns Task, which means you can await for the result of non-async method that returns Task. But you can't use await within such method. 
+When method returns awaitables: Task\<T> or Task or void(don't recommend this, explained below), its saying you can await the result of such methods. Its not because method has async but it returns Task, which means you can await for the result of non-async method that returns Task. But you can't use await within such method. 
 
 ```c#
 public async Task Method1(){
@@ -59,14 +59,16 @@ Alright, after knowing these basics, working on your first async/await codebase,
   2. Seems like every tasks are completed but await never seems knowing if tasks are completed. 
 
 The root case for first senario is either you don't have __await__ in your async method. Without __await__, async method execute the method as the normal method execution. Or somewhere down the pipe, you are making a blocking call.   
+ 
+The second senario is a deadlock situation, which you may not like. ....
 
 
+So, Try to follow the best practice for async and await as mentioned by [Stephen Cleary](https://msdn.microsoft.com/en-us/magazine/jj991977.aspx).
 
-* Avoid Async void
-  Especially because of the way the exceptions are handled when using Async void. When expeception is thrown, it will be raise directly on the SynchronizationContext that was active when the async void method started. In the other hand, with async method with return type Task and Task\<T>, exceptions are captured and stored on the Return Task itself, resulting easier and simplier handling.
-  Void returning async methods have a specific purpose: to make asynchronous event handlers possible.
+1. Avoid Async void
+  Especially because of the way the exceptions are handled when using Async void. When expeception is thrown, it will be raise directly on the SynchronizationContext that was active when the async void method started. In the other hand, with async method with return type Task and Task\<T>, exceptions are captured and stored on the Return Task itself, resulting easier and simplier handling. Void returning async methods have a specific purpose: to make asynchronous event handlers possible.
 
-* Async all the way
+2. Async all the way
 
 
 
