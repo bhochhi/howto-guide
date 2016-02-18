@@ -32,7 +32,9 @@ namespace ProductApps.Controllers
             var task1 = Method1Asyc(4,"task1", products);
 
             //            await Task.WhenAll(task1, task2, task3);
-            await Task.WhenAny(task1, task2, task3); //unable to verify WhenAny is waiting only for the first one that complete. Everytime I see all tasks completed.
+            var completedTask = Task.WhenAny(task1, task2, task3); //unable to verify WhenAny is waiting only for the first one that complete. Everytime I see all tasks completed.
+
+            
 
 //           
 //            products.AddRange(task3.Result);
