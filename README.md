@@ -58,9 +58,9 @@ Alright, after knowing these basics, working on your first async/await codebase,
   1. Everything is working, results are as expected. However it seems every tasks are running synchronously.
   2. Seems like every tasks are completed but await never seems knowing if tasks are completed. 
 
-The root case for first senario is either you don't have __await__ in your async method. Without __await__, async method execute the method as the normal method execution. Or somewhere down the pipe, you are making a blocking call.   
- 
-The second senario is a deadlock situation, which you may not like. ....
+The root case for first senario is either you don't have __await__ in your async method. Without __await__, async method execute the method as the normal method execution. Or somewhere down the pipe, you are making a blocking call. or you have explicitly called task to run synchronously.
+
+The second senario is a deadlock situation, which you may not like. This usually happens with UI or ASP.NET context when, Main calling method is waiting for called async method, which in turn waiting for the main context to excute the remaining of its method. Please check my [example]() repo showing such senario.
 
 
 So, Try to follow the best practice for async and await as mentioned by [Stephen Cleary](https://msdn.microsoft.com/en-us/magazine/jj991977.aspx).
