@@ -72,6 +72,7 @@ This bring us to some best practices using async and await as mentioned by [Step
   Especially because of the way the exceptions are handled when using Async void. When expeception is thrown, it will be raise directly on the SynchronizationContext that was active when the async void method started. In the other hand, with async method with return type Task and Task\<T>, exceptions are captured and stored on the Return Task itself, resulting easier and simplier handling. Void returning async methods have a specific purpose: to make asynchronous event handlers possible.
 
 2. Async all the way
+ Means you shouldn't mix synchronous and asynchronous code.  Check out following ASP.NET code, async starts from controller  and continues with async calls if needed. 
   ```c#
    public class MyController:APiController
    {
@@ -83,6 +84,8 @@ This bring us to some best practices using async and await as mentioned by [Step
 
    }
   ```
+ However, thinks might not be as simple as 
+    
 3. Use configureAwait(false).
 
 
