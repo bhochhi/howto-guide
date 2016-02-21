@@ -62,13 +62,20 @@ The root case for first senario is either you don't have __await__ in your async
 
 The second senario is a deadlock situation, which you may not like. This usually happens with UI or ASP.NET context when, Main calling method is waiting for called async method, which in turn waiting for the main context to excute the remaining of its method. Please check my [example]() repo showing such senario.
 
+So, to prevent the deallock:
+ 1. use configurAwait(false) where possible inside aysnc method when it calls another async method.
+ 2. Don't make blocking calls within async method.
 
-So, Try to follow the best practice for async and await as mentioned by [Stephen Cleary](https://msdn.microsoft.com/en-us/magazine/jj991977.aspx).
+This bring us to some best practices using async and await as mentioned by [Stephen Cleary](https://msdn.microsoft.com/en-us/magazine/jj991977.aspx).
 
 1. Avoid Async void
   Especially because of the way the exceptions are handled when using Async void. When expeception is thrown, it will be raise directly on the SynchronizationContext that was active when the async void method started. In the other hand, with async method with return type Task and Task\<T>, exceptions are captured and stored on the Return Task itself, resulting easier and simplier handling. Void returning async methods have a specific purpose: to make asynchronous event handlers possible.
 
-2. Async all the way
+2. Async all the way: 
+
+3.Use configureAwait(false).
+
+
 
 
 
