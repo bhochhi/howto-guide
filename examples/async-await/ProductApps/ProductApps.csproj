@@ -125,6 +125,7 @@
   <ItemGroup>
     <Compile Include="App_Start\configurations\DBConnection.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\DeadLockController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
