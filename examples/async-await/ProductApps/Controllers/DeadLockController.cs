@@ -26,9 +26,11 @@ namespace ProductApps.Controllers
         private static async Task DelayAsync()
         {
             Debug.WriteLine("{0} is running on thread: {1}", "inside DelayAsync", Thread.CurrentThread.ManagedThreadId);
-            await Task.Delay(1000); //assume some async tasks
+            await Task.Delay(1000); //assume awaiting for some async tasks
             Debug.WriteLine("{0} is running on thread: {1}", "inside DelayAsync after", Thread.CurrentThread.ManagedThreadId);
         }
+
+
 
 
 
