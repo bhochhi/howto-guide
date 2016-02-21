@@ -84,7 +84,9 @@ This bring us to some best practices using async and await as mentioned by [Step
 
    }
   ```
- However, thinks might not be as simple as 
+ However, thinks might not be as simple as said, making all asynchronous. There are always some limitation, may be the framework you are using doesn't support async or may be you have a gaint codebase and you just want to make certain section to be asynchronous. But you need to be careful and know the consequences. This is where you might end up with deadlock.
+ 
+ 
     
 3. Use configureAwait(false).
 
