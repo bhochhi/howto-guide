@@ -7,29 +7,26 @@ using ProductApps.Models;
 
 namespace ProductApps.Controllers
 {
-    public class DeadLockController : ApiController
+    public class DeadLockResolveUsingAsyncAllTheWayController : ApiController
     {
-        //demonastrating: deadlock.
+        //demonastrating: deadlock prevention using Async all the way.
 
         [HttpGet]
-        public IEnumerable<Product> GetProducts()
+        public async Task<IEnumerable<Product>> GetProducts()
         {
-            var task = DelayAsync();
-            return task.Result;
+            var products = await DelayAsync();
+            products.Add(new Product {Name = "prod2"});
+            return products;
         }
-
+        
 
 
         private async Task<IList<Product>> DelayAsync()
         {
             var prods = new List<Product>();
             await Task.Delay(2000); //creates new task and delays 2 sec.
-            prods.Add(new Product { Name = "prod1" });
+            prods.Add(new Product {Name = "prod1"});
             return prods;
         }
-
-
-        
-
     }
 }
