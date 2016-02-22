@@ -92,11 +92,11 @@ This bring us to some best practices using async and await as mentioned by [Step
 That's all about async and await. The concept is very close to promise pattern in javascript. Its very simple compare to concurrent programming using threads. I really liked this feature of c#. 
 
 _ref_
-[1]: https://msdn.microsoft.com/en-us/magazine/jj991977.aspx   "https://msdn.microsoft.com/en-us/magazine/jj991977.aspx"   [2]: https://www.youtube.com/watch?v=MCW_eJA2FeY "https://www.youtube.com/watch?v=MCW_eJA2FeY"
-[3]: http://blog.ciber.no/2014/05/19/using-task-configureawaitfalse-to-prevent-deadlocks-in-async-code/ "http://blog.ciber.no/2014/05/19/using-task-configureawaitfalse-to-prevent-deadlocks-in-async-code/" 
-[4]: http://blog.stephencleary.com/2012/02/async-and-await.html "http://blog.stephencleary.com/2012/02/async-and-await.html"
-[5]: http://blog.stephencleary.com/2012/07/dont-block-on-async-code.html "
- http://blog.stephencleary.com/2012/07/dont-block-on-async-code.html" 
+* https://msdn.microsoft.com/en-us/magazine/jj991977.aspx  
+* https://www.youtube.com/watch?v=MCW_eJA2FeY
+* http://blog.ciber.no/2014/05/19/using-task-configureawaitfalse-to-prevent-deadlocks-in-async-code/
+* http://blog.stephencleary.com/2012/02/async-and-await.html
+* http://blog.stephencleary.com/2012/07/dont-block-on-async-code.html
  
  
  
