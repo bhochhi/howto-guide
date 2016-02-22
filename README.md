@@ -96,6 +96,8 @@ This bring us to some best practices using async and await as mentioned by [Step
  [example]()
  ref: https://msdn.microsoft.com/en-us/magazine/jj991977.aspx
  https://www.youtube.com/watch?v=MCW_eJA2FeY
+ http://blog.ciber.no/2014/05/19/using-task-configureawaitfalse-to-prevent-deadlocks-in-async-code/
+ 
  
  http://blog.stephencleary.com/2012/02/async-and-await.html
  http://blog.stephencleary.com/2012/07/dont-block-on-async-code.html
