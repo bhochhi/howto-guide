@@ -63,16 +63,16 @@ The root case for first senario is either you don't have __await__ in your async
 The second senario is a deadlock situation, which you may not like. This usually happens with UI or ASP.NET context when, Main calling method is waiting for called async method, which in turn waiting for the main context to excute the remaining of its method. Please check my [example]() repo showing such senario.
 
 So, to prevent the deallock:
- 1. use configurAwait(false) where possible inside aysnc method when it calls another async method.
- 2. Don't make blocking calls within async method.
-
+ 1. Make all the way Async(see my [repo]()).
+ 2. use configurAwait(false) where possible(see my [repo]() demonastrated with ASP.NET)
+ 
 This bring us to some best practices using async and await as mentioned by [Stephen Cleary](https://msdn.microsoft.com/en-us/magazine/jj991977.aspx).
 
 1. Avoid Async void
   Especially because of the way the exceptions are handled when using Async void. When expeception is thrown, it will be raise directly on the SynchronizationContext that was active when the async void method started. In the other hand, with async method with return type Task and Task\<T>, exceptions are captured and stored on the Return Task itself, resulting easier and simplier handling. Void returning async methods have a specific purpose: to make asynchronous event handlers possible.
 
 2. Async all the way
- Means you shouldn't mix synchronous and asynchronous code.  Check out following ASP.NET code, async starts from controller  and continues with async calls if needed. 
+ Means you shouldn't mix synchronous and asynchronous code.  Check out following ASP.NET code, async starts from controller  and continues with async calls if needed. The promise is you don't have to use __wait__ that blocks the calling method.
   ```c#
    public class MyController:APiController
    {
@@ -84,23 +84,27 @@ This bring us to some best practices using async and await as mentioned by [Step
 
    }
   ```
- However, things might not be as simple as said, making all asynchronous. There are always some limitation, may be the framework you are using doesn't support async or may be you have a gaint codebase and you just want to make certain section to be asynchronous. But you need to be careful and know the consequences. This is where you might end up with deadlock.Checkout out my [repo] that demonastrates the deadlock code.
+ However, things might not be as simple as said, making all asynchronous. There are always some limitation, may be the framework you are using doesn't support async or may be you have a gaint codebase and you just want to make certain section to be asynchronous. But you need to be careful and know the consequences. This is where you might end up with deadlock. Checkout out my [repo] that demonastrates the deadlock code.
 
-3. Use configureAwait(false)
-   
+3. Use configureAwait(false):
+ When using configureAwait(false), you are running remaining of the method into seperate thread instead of original calling Thread. This is very important to use when possible as this could also increase efficiency as well as stop from deadlock. However you need to be careful as you can't always use configure(false), like if the calling thread is UI-Thread. 
 
+That's all about async and await. The concept is very close to promise pattern in javascript. Its very simple compare to concurrent programming using threads. I really liked this feature of c#. 
 
-
-
-
- [example]()
- ref: https://msdn.microsoft.com/en-us/magazine/jj991977.aspx
- https://www.youtube.com/watch?v=MCW_eJA2FeY
- http://blog.ciber.no/2014/05/19/using-task-configureawaitfalse-to-prevent-deadlocks-in-async-code/
+REF:
+  [1]: https://msdn.microsoft.com/en-us/magazine/jj991977.aspx   "https://msdn.microsoft.com/en-us/magazine/jj991977.aspx"    
+  [2]: https://www.youtube.com/watch?v=MCW_eJA2FeY "https://www.youtube.com/watch?v=MCW_eJA2FeY"
+  
+  [3]: http://blog.ciber.no/2014/05/19/using-task-configureawaitfalse-to-prevent-deadlocks-in-async-code/ "http://blog.ciber.no/2014/05/19/using-task-configureawaitfalse-to-prevent-deadlocks-in-async-code/"
+  
+  [4]: http://blog.stephencleary.com/2012/02/async-and-await.html "http://blog.stephencleary.com/2012/02/async-and-await.html"
+  
+  [5]: 
+ http://blog.stephencleary.com/2012/07/dont-block-on-async-code.html "
+ http://blog.stephencleary.com/2012/07/dont-block-on-async-code.html" 
  
  
- http://blog.stephencleary.com/2012/02/async-and-await.html
- http://blog.stephencleary.com/2012/07/dont-block-on-async-code.html
+ 
 
 [Troubleshooting using jmap](https://github.com/bhochhi/howto-guide/wiki/Troubleshooting-using-jmap)
 
