@@ -12,15 +12,9 @@
 
 [Git vs Bare Git repository ](http://www.saintsjd.com/2011/01/what-is-a-bare-git-repository/);
 
-[How maven works?](https://github.com/bhochhi/howto-guide/wiki/How-maven-works%3F)
-
 [xclip]()
 
 [How to map custom domain to app in heroku.](https://github.com/bhochhi/howto-guide/wiki/JNDI)
-
-[How Maven work?](https://github.com/bhochhi/howto-guide/wiki/How-maven-works%3F)
-
-[How maven resolve the dependency conflict, any difference with npm?]()
 
 [How to build a plugin?,ex for eclipse]()
 
