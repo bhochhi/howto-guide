@@ -2,6 +2,9 @@
 
 [Documenting](https://github.com/bhochhi/howto-guide/wiki) how to fix or solve any specific tasks or problem, whether its coding issue or operations. Should cover wide range of topics.
 
+[How to deal with Regex? Show with example.]
+Recently, I have to write validation logic to check if the given string matches with specified criteria. The best way to do this is to represent such criteria in regular expression. 
+
 [Async and Await](https://github.com/bhochhi/howto-guide/wiki/Async-and-Await)
 
 [Troubleshooting using jmap](https://github.com/bhochhi/howto-guide/wiki/Troubleshooting-using-jmap)
