@@ -5,7 +5,7 @@
 [How to use Regex? Show with example.]()
 
 Recently, I have to write validation logic in javascript to check if the given string matches a specified criteria. The best way to do was to represent such criteria in regular expression. 
-[ref](http://www.regular-expressions.info/tutorial.html)
+[ref](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
 
 [Async and Await](https://github.com/bhochhi/howto-guide/wiki/Async-and-Await)
 
