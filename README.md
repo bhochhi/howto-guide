@@ -9,7 +9,9 @@ Recently, I have to write validation logic in javascript to check if the given s
    2. Digit suffix either with "am" or "pm" 
    3. Digit suffix with ":[00 to 59]"
    4. Two digits following rules 1/2/3  separated by hypen.
-   5. 
+
+Here is the regex that matches given criteria:  __/^((1[0-2]|0?[0-9])(:[0-5][0-9])?(am|pm)?)(-((1[0-2]|0?[0-9])(:[0-5][0-9])?(am|pm)?))?$/__
+ 
 [ref](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
 
 [Async and Await](https://github.com/bhochhi/howto-guide/wiki/Async-and-Await)
