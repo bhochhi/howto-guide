@@ -2,6 +2,8 @@
 
 [Documenting](https://github.com/bhochhi/howto-guide/wiki) how to fix or solve any specific tasks or problem, whether its coding issue or operations. Should cover wide range of topics.
 
+[How CORS works](http://www.html5rocks.com/en/tutorials/cors/)
+
 [How to use Regex? Show with example.]()
 
 Recently, I have to write validation logic in javascript to check if the given string matches a specified criteria. The best way to do was to represent such criteria in regular expression. For instance, let say we want to validate the input string __value__. A __value__ is a time(hr:min) or time frame(hr-hr). Following are valid inputs: 8, 8am, 8pm, 8:30, 8:30am, 8-9, 8am-9am, 8:30-9, 11:30am-1pm, 11-12pm. So, the specified criteria are:
