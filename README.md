@@ -2,6 +2,8 @@
 
 [Installing various packages into unbuntu](https://github.com/bhochhi/howto-guide/wiki/command-line-installation-of-various-packages-in-ubuntu)
 
+[Installing oracle java]()
+
 [How CORS works](http://www.html5rocks.com/en/tutorials/cors/)
 
 [How to use Regex? Show with example.](https://github.com/bhochhi/howto-guide/wiki/regex)
