@@ -1,7 +1,6 @@
-# howto-guide
-
 [Documenting](https://github.com/bhochhi/howto-guide/wiki) how to fix or solve any specific tasks or problem, whether its coding issue or operations. Should cover wide range of topics.
 
+[Installing nodejs into unbuntu](https://github.com/bhochhi/howto-guide/wiki/nodejs-in-ubuntu)
 [How CORS works](http://www.html5rocks.com/en/tutorials/cors/)
 
 [How to use Regex? Show with example.](https://github.com/bhochhi/howto-guide/wiki/regex)
