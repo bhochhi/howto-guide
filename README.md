@@ -4,7 +4,7 @@
 
 [How CORS works](http://www.html5rocks.com/en/tutorials/cors/)
 
-[How to use Regex? Show with example.]()
+[How to use Regex? Show with example.](https://github.com/bhochhi/howto-guide/wiki/regex)
 
 [Async and Await](https://github.com/bhochhi/howto-guide/wiki/Async-and-Await)
 
