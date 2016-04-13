@@ -26,7 +26,7 @@ Here is the regex that matches given criteria:  __/^((1[0-2]|0?[0-9])(:[0-5][0-9
 
 [Git vs Bare Git repository ](http://www.saintsjd.com/2011/01/what-is-a-bare-git-repository/);
 
-[xclip]()
+[linux commandline utilities](https://github.com/bhochhi/howto-guide/wiki/linux)
 
 [How to map custom domain to app in heroku.](https://github.com/bhochhi/howto-guide/wiki/JNDI)
 
