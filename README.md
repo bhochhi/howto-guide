@@ -2,6 +2,8 @@
 
 [Installing various packages into unbuntu](https://github.com/bhochhi/howto-guide/wiki/command-line-installation-of-various-packages-in-ubuntu)
 
+[Linux Directory Map](http://blog.danyll.com/linux-directory-map/)
+
 [Installing oracle java]()
 
 [How CORS works](http://www.html5rocks.com/en/tutorials/cors/)
