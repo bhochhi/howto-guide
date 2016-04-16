@@ -2,7 +2,7 @@
 
 [Installing various packages into unbuntu](https://github.com/bhochhi/howto-guide/wiki/command-line-installation-of-various-packages-in-ubuntu)
 
-[Linux Directory Map](http://blog.danyll.com/linux-directory-map/)
+[Linux Directory Map](https://github.com/bhochhi/howto-guide/wiki/Linux-Directory)
 
 [Installing oracle java]()
 
