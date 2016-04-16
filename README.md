@@ -4,7 +4,7 @@
 
 [Linux Directory Map](https://github.com/bhochhi/howto-guide/wiki/Linux-Directory)
 
-[Installing oracle java]()
+[Installing oracle java](http://askubuntu.com/questions/521145/how-to-install-oracle-java-on-ubuntu-14-04)
 
 [How CORS works](http://www.html5rocks.com/en/tutorials/cors/)
 
