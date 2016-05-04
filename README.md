@@ -1,5 +1,11 @@
 [Documenting](https://github.com/bhochhi/howto-guide/wiki) how to fix or solve any specific tasks or problem, whether its coding issue or operations. Should cover wide range of topics.
 
+[How OAuth2 works](https://gist.github.com/mziwisky/10079157)
+
+https://gist.github.com/mziwisky/10079157
+
+
+
 [Installing various packages into unbuntu](https://github.com/bhochhi/howto-guide/wiki/command-line-installation-of-various-packages-in-ubuntu)
 
 [Linux Directory Map](https://github.com/bhochhi/howto-guide/wiki/Linux-Directory)
