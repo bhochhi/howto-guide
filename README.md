@@ -6,6 +6,8 @@ https://gist.github.com/mziwisky/10079157
 
 [API cheat sheet](http://overapi.com/)
 
+[cheatsheet](http://ricostacruz.com/cheatsheets/)
+
 [chai cheatsheet](http://ricostacruz.com/cheatsheets/chai.html)
 
 [Installing various packages into unbuntu](https://github.com/bhochhi/howto-guide/wiki/command-line-installation-of-various-packages-in-ubuntu)
