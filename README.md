@@ -1,6 +1,6 @@
 [Documenting](https://github.com/bhochhi/howto-guide/wiki) how to fix or solve any specific tasks or problem, whether its coding issue or operations. Should cover wide range of topics.
 
-[How require method in node module works?]()
+[How require method in node module works?](http://fredkschott.com/post/2014/06/require-and-the-module-system/)
 
 
 [How you use npm as build tool](http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/)
