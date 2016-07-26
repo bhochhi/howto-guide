@@ -1,11 +1,18 @@
 [Documenting](https://github.com/bhochhi/howto-guide/wiki) how to fix or solve any specific tasks or problem, whether its coding issue or operations. Should cover wide range of topics.
 
+[How to do denormalized design]()  
+
+
+
+
+
 
 [How to create the slush generator]()
-1. A slush generator is a npm package with nameing convention slush-* 
-2. Add slushgenerator as keyword in package.json.
-3. Add the file slushfile.js.
-2. A
+1. A slush generator is a npm package with nameing convention slush-*  
+2. Add slushgenerator as keyword in package.json.  
+3. Add the file slushfile.js.  
+2. A  
+3. 
 
 [How require method in node module works?](http://fredkschott.com/post/2014/06/require-and-the-module-system/)
 
