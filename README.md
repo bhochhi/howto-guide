@@ -16,7 +16,7 @@
 
 [How require method in node module works?](http://fredkschott.com/post/2014/06/require-and-the-module-system/)
 
-
+[how to not require sudo installing npm globally](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md)  
 [How you use npm as build tool](http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/)
 
 [How OAuth2 works](https://tools.ietf.org/html/rfc6749#page-4)
