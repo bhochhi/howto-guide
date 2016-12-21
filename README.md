@@ -14,6 +14,8 @@
 2. A  
 3. 
 
+[How Nodejs Works? How Nodejs server is different from tranditional?]()
+
 [How require method in node module works?](http://fredkschott.com/post/2014/06/require-and-the-module-system/)
 
 [how to not require sudo installing npm globally](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md)  
