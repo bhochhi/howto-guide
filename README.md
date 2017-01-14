@@ -1,5 +1,8 @@
 [Documenting](https://github.com/bhochhi/howto-guide/wiki) how to fix or solve any specific tasks or problem, whether its coding issue or operations. Should cover wide range of topics.
 
+
+[Caching Management]()
+
 [How to do denormalized design]()  
 
 
@@ -8,11 +11,6 @@
 
 
 [How to create the slush generator]()
-1. A slush generator is a npm package with nameing convention slush-*  
-2. Add slushgenerator as keyword in package.json.  
-3. Add the file slushfile.js.  
-2. A  
-3. 
 
 [How Nodejs Works? How Nodejs server is different from tranditional?]()
 
