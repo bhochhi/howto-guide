@@ -2,7 +2,11 @@
 
 
 [Business process and Workflow]()
-A collection of activities cross cutting various departments for specifi business goal make business process. Automation of such business process makes up workflow. 
+A collection of activities cross cutting various departments for specifi business goal make business process. Automation of such business process makes up workflow. A workflow can be represented by Finite State Machine:
+- State: A workflow exactly one state at any given time.
+- State Transition: Change of state in workflow can be observed
+- Events: Events cause state transition
+- Actions: execution of business logic in response to state transition. 
 
 
 
