@@ -6,6 +6,17 @@
 
 [Workflow as State Machine]()
 
+#### Some Chatbots/Conversational/NLP/NLU/DL related articles and resources:
+* [wit](wit.ai)  
+* [quora](https://www.quora.com/How-can-I-build-an-intelligent-chat-bot)  
+* [Deep learning chatbot intro](http://www.wildml.com/2016/04/deep-learning-for-chatbots-part-1-introduction/)  
+* [api](https://api.ai/)  
+* [chatbots for fun](https://joeyrobert.org/2016/05/18/building-a-chat-bot-for-fun-and-profit/)  
+* [wildml](http://www.wildml.com/)  
+* []()
+
+---
+
 [Caching Management]()
 
 [How to do denormalized design]()  
