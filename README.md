@@ -23,7 +23,7 @@
 
 
 
-[understand-google-docs-can-understand-blockchain](http://www.coindesk.com/understand-google-docs-can-understand-blockchain/
+[understand-google-docs-can-understand-blockchain](http://www.coindesk.com/understand-google-docs-can-understand-blockchain/)  
 
 [BlockChain](http://blockgeeks.com/guides/what-is-blockchain-technology/)  
 
