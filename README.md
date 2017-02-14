@@ -23,8 +23,6 @@
 
 
 
-[understand-google-docs-can-understand-blockchain](http://www.coindesk.com/understand-google-docs-can-understand-blockchain/)  
-
 [BlockChain](http://blockgeeks.com/guides/what-is-blockchain-technology/)  
 
 [How to create the slush generator]()
