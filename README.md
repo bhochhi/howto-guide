@@ -21,6 +21,8 @@
 
 [How to do denormalized design]()  
 
+[How SEO works? How to build SEO friendly web apps?](https://github.com/bhochhi/howto-guide/wiki/How SEO works?)
+
 [**HTTP/2**](https://github.com/bhochhi/howto-guide/wiki/HTTP-2)
 
 [BlockChain](http://blockgeeks.com/guides/what-is-blockchain-technology/)  
