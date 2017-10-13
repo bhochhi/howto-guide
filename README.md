@@ -21,7 +21,7 @@
 
 [How to do denormalized design]()  
 
-[How SEO works? How to build SEO friendly web apps?] (https://github.com/bhochhi/howto-guide/wiki/How-SEO-works%3F)
+[How SEO works? How to build SEO friendly web apps?](https://github.com/bhochhi/howto-guide/wiki/How-SEO-works%3F)
 
 [**HTTP/2**](https://github.com/bhochhi/howto-guide/wiki/HTTP-2)
 
