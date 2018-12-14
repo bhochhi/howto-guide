@@ -8,6 +8,7 @@
 7. [Python Modules and Packages](https://docs.python.org/3/tutorial/modules.html#packages)
 8. [Generating dist. package](https://packaging.python.org/tutorials/packaging-projects/#generating-distribution-archives)
 9. [Flask web app: quickstart](http://flask.pocoo.org/docs/1.0/quickstart/#quickstart)
+10.(Pipenv: Python Dev Workflow for Humans](https://pipenv.readthedocs.io/en/latest/)
 
 Manage python using pyenv
 ---
