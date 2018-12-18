@@ -20,7 +20,7 @@ To manage multiple version of python and package management, I like using pyenv.
 - to set global versions of Python to be used in all shells: ```pyenv global 2.7.12 3.5.2``` ```pyenv rehash```
 - to set local version of python to be use in a shells: ```cd path/to/directory``` ```pyenv local 3.7``` it creates .python-version file in the directory.
 - now whenever you are on the project directory, it will start using python 3.7
-
+- [pyenv commands](https://github.com/pyenv/pyenv/blob/master/COMMANDS.md) 
 Manage packages/dependencies using pipenv
 --- 
 - pipenv is similar to npm as python to node and nvm to pyenv
