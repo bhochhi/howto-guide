@@ -9,6 +9,7 @@
 8. [Generating dist. package](https://packaging.python.org/tutorials/packaging-projects/#generating-distribution-archives)
 9. [Flask web app: quickstart](http://flask.pocoo.org/docs/1.0/quickstart/#quickstart)
 10.(Pipenv: Python Dev Workflow for Humans](https://pipenv.readthedocs.io/en/latest/)
+11. [Dockerized flask application](https://medium.com/@greut/building-a-python-package-a-docker-image-using-pipenv-233d8793b6cc)
 
 Manage python using pyenv
 ---
