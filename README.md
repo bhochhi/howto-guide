@@ -40,6 +40,8 @@
 
 [How OAuth2 works](https://tools.ietf.org/html/rfc6749#page-4)
 
+[How to setup gradle based project to depend on source of another project for local development/debugging?](https://github.com/bhochhi/howto-guide/wiki/How-to-setup-gradle-based-project-to-depend-on-source-of-another-project-for-local-development-debugging%3F)
+
 https://gist.github.com/mziwisky/10079157
 
 [API cheat sheet](http://overapi.com/)
